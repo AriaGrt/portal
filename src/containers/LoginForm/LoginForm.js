@@ -1,13 +1,13 @@
 import React, {Component} from "react"
 import { Input } from "semantic-ui-react"
 import './LoginForm.css'
-import {updateUserIdAction} from "../../actions/index"
+import {updateUserIdAction, checkUserIdAction} from "../../actions/authenticationActions"
 import {connect} from "react-redux"
 
 class LoginForm extends Component {
 
   checkKeyPress = (key, checkUserId) => {
-    // if(key === 'Enter') checkUserId(this.props.userId)
+    if(key === 'Enter') checkUserId(this.props.userId)
   }
 
   render(){
@@ -25,7 +25,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   updateEmailInput: userId =>   dispatch(updateUserIdAction(userId)),
-  // checkUserId: userId => dispatch
+  checkUserId: userId => dispatch(checkUserIdAction(userId))
 })
 
 

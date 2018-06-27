@@ -27,7 +27,8 @@
     "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.21.0",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-dev-server": "^3.1.4",
+    "webpack-node-externals": "^1.7.2"
   },
   "scripts": {
     "start:dev": "cd config && webpack-dev-server"
